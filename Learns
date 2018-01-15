@@ -1,0 +1,126 @@
+naming
+package nimahi
+class/interface NimaHi
+var/meth nimaHiGo
+cont NIMA_HI
+
+
+
+OuterClass.StaticNestedClass nestedObject =
+     new OuterClass.StaticNestedClass();
+
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+
+
+try{}catch{}catch{}finally{always runs}
+int main() throws IOException, IndexOutOfBoundsException{}
+
+StringBuilder()
+
+public class Box<T> {}
+public static void process(List<? extends Foo> list) { /* ... */ }
+public <U extends Number> void inspect(U u){}
+public static void addNumbers(List<? super Integer> list) {}
+public static void printList(List<?> list) {}
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+ FileInputStream in = new FileInputStream("xanadu.txt");
+ FileOutputStream out = new FileOutputStream("outagain.txt");
+
+
+import java.io.FileReader;
+import java.io.FileWriter;
+FileReader inputStream = new FileReader("xanadu.txt");
+FileWriter outputStream = new FileWriter("characteroutput.txt");
+
+inputStream = new BufferedReader(new FileReader("xanadu.txt"));
+outputStream = new BufferedWriter(new FileWriter("characteroutput.txt"));
+
+Scanner s = new Scanner(new BufferedReader(new FileReader("usnumbers.txt")));
+
+Object ob = new Object();
+out.writeObject(ob);
+out.writeObject(ob);
+Object ob1 = in.readObject();
+Object ob2 = in.readObject();
+
+Path p1 = Paths.get("/tmp/foo");
+Path fullPath = inputPath.toAbsolutePath();
+normalize
+p1.resolve("bar") : cd bar
+
+getFileName
+getName(0)
+getParent	
+getRoot
+
+if (Files.isSameFile(p1, p2)) {}
+boolean isRegularExecutableFile = Files.isRegularFile(file) & Files.isReadable(file) & Files.isExecutable
+(file);
+
+Files.delete(path);
+Copying a File or Directory (The Java™ Tutorials > Essential Classes > Basic I/O)
+Files.copy(source, target, REPLACE_EXISTING);
+Files.move(source, target, REPLACE_EXISTING);
+java.nio.file
+
+
+Charset charset = Charset.forName("US-ASCII");
+try (BufferedReader reader = Files.newBufferedReader(file, charset)) {}
+
+Charset charset = Charset.forName("US-ASCII");
+String s = ...;
+try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {}
+
+Files.createFile(Path file);
+
+Path dir = ...;
+Files.createDirectory(path);
+
+
+java.util.concurrent //paralel processing
+
+
+public class HelloThread extends Thread {
+
+    public void run() {
+        System.out.println("Hello from a thread!");
+    }
+     public static void main(String args[])
+        throws InterruptedException {
+
+	try {
+        Thread.sleep(4000);
+    } catch (InterruptedException e) {
+        // We've been interrupted: no more messages.
+        return;
+    }
+    	
+    }
+}
+Thread t = new Thread(new MessageLoop());
+t.start();
+
+
+arrayCopy
+currentTimeMillis and nanoTime
+
+java.util.regex
+
+SortedSet<E>
+
+Collections.binarySearch(list, key)
+
+
+//in line find and search collections : Aggregate Operations
+ roster
+    .stream()
+    .filter(e -> e.getGender() == Person.Sex.MALE)
+    .forEach(e -> System.out.println(e.getName()));
+
+
+ **deployment
+
+  URL, URLConnection, Socket, and ServerSocket classes all use TCP 
+  DatagramPacket, DatagramSocket, and MulticastSocket classes are for use with UDP
